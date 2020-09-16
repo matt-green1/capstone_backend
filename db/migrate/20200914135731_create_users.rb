@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       t.string :username
       t.string :password
-      t.boolean :letter_status
+      t.boolean :letter_status, { default: false }
 
       t.timestamps
     end
