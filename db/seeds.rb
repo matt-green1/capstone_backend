@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-u1 = User.create(username: "Matt33", password: "pw", letter_status: false)
-u2 = User.create(username: "Danny222", password: "pw", letter_status: false)
+u1 = User.create(username: "Matt", password: "pw", letter_status: false)
+u2 = User.create(username: "Danny", password: "pw", letter_status: false)
 
 
 e1 = Executor.create(user:u1, executor_name: "Phyllis", executor_email: "matthelps33@gmail.com", instructions: "Mom - If you're reading this it means I've passed away. Thanks for beinng my executor -- here are the instructions, etc etc")
@@ -18,7 +18,7 @@ e3 = Executor.create(user:u2, executor_name: "Julia", executor_email: "matthelps
 l1 = Letter.create(user: u1, letter_title: "College Friends", recipient_name: "Ethan", recipient_email: "ethan@gmail.com", letter_text: "Hey everyone, so... I did a thing...", letter_type: "Group", signoff: "Matt")
 l2 = Letter.create(user: u1, letter_title: "Julia - thank you", recipient_name: "Julia Pearlman", recipient_email: "julia@gmail.com", letter_text: "Hey Julia, so... I did a thing...", letter_type: "Individual", signoff: "Matt")
 
-l3 = Letter.create(user: u1, letter_title: "Dave - sorry", recipient_name: "Dave Bendet", recipient_email: "dave@gmail.com", letter_text: "Hey Dave, so... I did a thing...", letter_type: "Individual", signoff: "Danny")
+l3 = Letter.create(user: u2, letter_title: "Dave - sorry", recipient_name: "Dave Bendet", recipient_email: "dave@gmail.com", letter_text: "Hey Dave, so... I did a thing...", letter_type: "Individual", signoff: "Danny")
 
 
 

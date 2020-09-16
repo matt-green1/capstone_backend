@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     def login
         user = User.find_by(username: login_params[:username], password: login_params[:password])
         #debugger
-        render json: user
+        render json: user, include: [:letters, :executors]
     end
 end
 
@@ -10,4 +10,4 @@ private
 
 def login_params
     params.require(:user).permit(:username, :password)
-  end
+end
