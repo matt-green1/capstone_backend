@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_14_140926) do
+ActiveRecord::Schema.define(version: 2020_09_14_140306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "executors", force: :cascade do |t|
-    t.integer "executor_id"
     t.integer "user_id"
     t.string "executor_name"
     t.string "executor_email"
@@ -25,27 +24,19 @@ ActiveRecord::Schema.define(version: 2020_09_14_140926) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "life_statements", force: :cascade do |t|
-    t.integer "life_statement_id"
+  create_table "letters", force: :cascade do |t|
     t.integer "user_id"
-    t.string "statement_text"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "personal_letters", force: :cascade do |t|
-    t.integer "personal_letter_id"
-    t.integer "user_id"
+    t.string "letter_title"
     t.string "recipient_name"
     t.string "recipient_email"
     t.string "letter_text"
     t.string "letter_type"
+    t.string "signoff"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "user_id"
     t.string "username"
     t.string "password"
     t.boolean "letter_status"

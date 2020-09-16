@@ -1,4 +1,4 @@
-class PersonalLettersController < ApplicationController
+class LettersController < ApplicationController
     def index
         executors = Executor.all
         render json: executors
