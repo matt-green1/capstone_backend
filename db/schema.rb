@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2020_09_14_140306) do
     t.string "recipient_name"
     t.string "recipient_email"
     t.string "letter_text"
-    t.string "letter_type"
     t.string "signoff"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
