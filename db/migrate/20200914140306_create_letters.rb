@@ -7,6 +7,7 @@ class CreateLetters < ActiveRecord::Migration[6.0]
       t.string :recipient_email
       t.string :letter_text
       t.string :signoff
+      t.string :letter_instructions
 
       t.timestamps
     end

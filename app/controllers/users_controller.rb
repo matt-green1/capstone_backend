@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def login
-        user = User.find_by(username: login_params[:username], password: login_params[:password])
+        user = User.find_by(user_email: login_params[:user_email], password: login_params[:password])
         render json: user, include: [:letters, :executors]
     end
 
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create(login_params)
+        user = User.create(user_params)
         render json: user, include: [:letters, :executors]
     end
 
@@ -23,11 +23,12 @@ class UsersController < ApplicationController
     private
     
     def login_params
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:user_email, :password)
     end
 
+
     def user_params
-        params.require(:user).permit(:username, :password, :letter_status)
+        params.require(:user).permit(:user_email, :password, :letter_status, :last_batch, :first_name, :last_name)
     end
     
 end

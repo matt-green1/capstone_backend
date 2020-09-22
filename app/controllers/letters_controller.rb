@@ -18,7 +18,7 @@ class LettersController < ApplicationController
 
     private
     def letter_params
-        params.require(:letter).permit(:user_id, :letter_title, :recipient_name, :recipient_email, :letter_text, :signoff)
+        params.require(:letter).permit(:user_id, :letter_title, :recipient_name, :recipient_email, :letter_text, :letter_instructions, :signoff)
     end
 
 

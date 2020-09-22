@@ -4,7 +4,7 @@ class CreateExecutors < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.string :executor_name
       t.string :executor_email
-      t.string :instructions
+      t.string :relationship
 
       t.timestamps
     end

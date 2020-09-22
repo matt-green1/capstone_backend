@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_140306) do
     t.integer "user_id"
     t.string "executor_name"
     t.string "executor_email"
-    t.string "instructions"
+    t.string "relationship"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,14 +31,18 @@ ActiveRecord::Schema.define(version: 2020_09_14_140306) do
     t.string "recipient_email"
     t.string "letter_text"
     t.string "signoff"
+    t.string "letter_instructions"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "user_email"
     t.string "password"
     t.boolean "letter_status", default: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "last_batch", default: "Letters Not Sent Yet"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
