@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_140306) do
     t.string "recipient_email"
     t.string "letter_text"
     t.string "signoff"
-    t.string "letter_instructions"
+    t.string "letter_instructions", default: "N/A"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_140306) do
     t.boolean "letter_status", default: false
     t.string "first_name"
     t.string "last_name"
-    t.string "last_batch", default: "Letters Not Sent Yet"
+    t.string "last_batch", default: "N/A - Finalize Account Below to Send letters"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

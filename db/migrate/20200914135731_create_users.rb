@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.boolean :letter_status, { default: false }
       t.string :first_name
       t.string :last_name
-      t.string :last_batch, { default: "Letters Not Sent Yet" }
+      t.string :last_batch, { default: "N/A - Finalize Account Below to Send letters" }
 
       t.timestamps
     end
