@@ -1,24 +1,11 @@
-# README
+# LifeLetter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A will for your feelings. Inspired by <a href="https://med.stanford.edu/letter/friendsandfamily.html">The Stanford Letter Project</a>.
 
-Things you may want to cover:
+Backend Prerequesites: Ruby on Rails + PostgresSQL
 
-* Ruby version
+Backend Installation Instructions coming soon.
 
-* System dependencies
+You can find the front end here (LINK).
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+***Video demo and live site coming soon.
