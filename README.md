@@ -6,6 +6,6 @@ Backend Prerequesites: Ruby on Rails + PostgresSQL
 
 Backend Installation Instructions coming soon.
 
-You can find the front end here (LINK).
+Front end repo <a href="https://github.com/matt-green1/capstone_frontend">here</a>.
 
 ***Video demo and live site coming soon.
